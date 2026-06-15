@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>صالون مايو للتزيين النسائي · مكة المكرمة</title>
+<meta name="description" content="صالون مايو للتزيين النسائي في مكة المكرمة · تصفيف، صبغات، مكياج، عناية بالبشرة، وخدمات العرائس. أجواء راقية وخبرة موثوقة. احجزي عبر واتساب.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Tajawal:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --noir:#15110f;
+  --noir2:#1e1916;
+  --char:#2a221d;
+  --gold:#c6a15b;
+  --gold2:#e0c084;
+  --blush:#d7a39b;
+  --sand:#ece2d4;
+  --cream:#f5efe6;
+  --ink:#221c18;
+  --soft:#8c8077;
+  --softd:#b4a99e;
+  --line:rgba(198,161,91,.22);
+  --r:22px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Tajawal',sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden;line-height:1.75}
+h1,h2,h3,.disp{font-family:'Almarai',sans-serif;font-weight:800;line-height:1.2}
+.lat{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:.7rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase}
+.eyebrow b{width:24px;height:1.5px;background:var(--gold);display:inline-block}
+
+/* preloader */
+#pre{position:fixed;inset:0;background:var(--noir);z-index:9999;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;transition:opacity .7s ease}
+#pre.done{opacity:0;pointer-events:none;display:none}
+#pre .mk{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--gold2);font-size:3rem;letter-spacing:1px;opacity:0;animation:fin 1s ease forwards}
+#pre .ln{width:0;height:1.5px;background:linear-gradient(90deg,transparent,var(--gold),transparent);animation:gw 1.5s ease forwards}
+@keyframes fin{to{opacity:1}}
+@keyframes gw{to{width:180px}}
+
+/* nav */
+nav{position:fixed;top:0;right:0;left:0;z-index:900;display:flex;align-items:center;justify-content:space-between;padding:22px 32px;transition:all .5s cubic-bezier(.32,.72,0,1)}
+nav.shr{padding:13px 32px;background:rgba(21,17,15,.85);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+nav .brand{font-family:'Almarai';font-weight:800;font-size:1.28rem;color:#fff;display:flex;align-items:center;gap:10px;transition:color .4s}
+nav:not(.shr) .brand{color:#fff}
+nav .brand i{width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--gold2),var(--gold));display:grid;place-items:center;color:var(--noir);font-family:'Cormorant Garamond';font-style:italic;font-weight:700;font-size:1.05rem}
+nav .links{display:flex;gap:30px;align-items:center}
+nav .links a{font-size:.95rem;font-weight:500;color:rgba(255,255,255,.82);position:relative;padding:4px 0;transition:color .3s}
+nav.shr .links a{color:rgba(245,239,230,.82)}
+nav .links a:hover{color:var(--gold2)}
+.navcta{background:var(--gold);color:var(--noir)!important;padding:10px 22px;border-radius:8px;font-weight:700;font-size:.9rem;transition:transform .4s cubic-bezier(.32,.72,0,1),background .4s}
+.navcta:hover{transform:translateY(-2px);background:var(--gold2)}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:6px}
+.burger span{width:26px;height:2px;background:#fff;transition:.4s cubic-bezier(.32,.72,0,1)}
+.burger.x span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger.x span:nth-child(2){opacity:0}
+.burger.x span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mob{position:fixed;inset:0;background:rgba(21,17,15,.97);z-index:899;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;opacity:0;pointer-events:none;transition:opacity .5s}
+.mob.open{opacity:1;pointer-events:auto}
+.mob a{font-family:'Almarai';font-size:1.6rem;color:#fff}
+.mob a.navcta{background:var(--gold);color:var(--noir)!important}
+
+/* hero full-bleed */
+.hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;overflow:hidden}
+.hero .bg{position:absolute;inset:0;z-index:0}
+.hero .bg img{width:100%;height:100%;object-fit:cover;transform:scale(1.08);animation:kb 16s ease-out forwards}
+@keyframes kb{to{transform:scale(1)}}
+.hero .bg::after{content:"";position:absolute;inset:0;background:
+  linear-gradient(to top,rgba(21,17,15,.96) 4%,rgba(21,17,15,.5) 45%,rgba(21,17,15,.7) 100%)}
+.hero .inner{position:relative;z-index:2;padding-bottom:74px;width:100%}
+.hero .eyebrow{color:var(--gold2);margin-bottom:22px}
+.hero h1{font-size:clamp(2.8rem,7vw,5.4rem);color:#fff;letter-spacing:-1px;max-width:16ch}
+.hero h1 em{font-family:'Cormorant Garamond';font-style:italic;color:var(--gold2);font-weight:600}
+.hero p.lead{color:rgba(245,239,230,.82);font-size:1.18rem;max-width:34rem;margin:24px 0 32px;font-weight:300}
+.hbtns{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:12px;padding:15px 16px 15px 26px;border-radius:10px;font-weight:700;font-size:1rem;transition:transform .45s cubic-bezier(.32,.72,0,1),box-shadow .45s,background .4s;cursor:pointer;border:0}
+.btn .ic{width:32px;height:32px;border-radius:8px;display:grid;place-items:center;transition:transform .45s cubic-bezier(.32,.72,0,1)}
+.btn-p{background:var(--gold);color:var(--noir)}
+.btn-p .ic{background:var(--noir);color:var(--gold2)}
+.btn-p:hover{transform:translateY(-3px);box-shadow:0 18px 36px -16px rgba(198,161,91,.6)}
+.btn-p:hover .ic{transform:translateX(-4px)}
+.btn-g{background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.22);padding:15px 26px;backdrop-filter:blur(6px)}
+.btn-g:hover{transform:translateY(-3px);border-color:var(--gold2);background:rgba(255,255,255,.14)}
+.hmeta{display:flex;gap:30px;margin-top:38px;flex-wrap:wrap}
+.hmeta .it{color:#fff}
+.hmeta .it .n{font-family:'Almarai';font-size:1.7rem;color:var(--gold2);font-weight:800;line-height:1}
+.hmeta .it .l{font-size:.82rem;color:rgba(245,239,230,.6);margin-top:4px;letter-spacing:.04em}
+.hmeta .it+.it{border-right:1px solid rgba(255,255,255,.16);padding-right:30px}
+
+/* intro split */
+.intro{padding:100px 0;background:var(--cream)}
+.isplit{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.intro .eyebrow{color:var(--gold);margin-bottom:18px}
+.intro h2{font-size:clamp(1.9rem,4.2vw,2.9rem);color:var(--ink)}
+.intro h2 em{font-family:'Cormorant Garamond';color:var(--blush)}
+.intro p{color:var(--soft);font-size:1.07rem;margin-top:18px}
+.iimg{position:relative}
+.iimg .main{border-radius:var(--r);overflow:hidden;box-shadow:0 30px 60px -30px rgba(21,17,15,.5)}
+.iimg .main img{width:100%;height:520px;object-fit:cover;transition:transform 1.2s cubic-bezier(.22,.61,.36,1)}
+.iimg:hover .main img{transform:scale(1.05)}
+.iimg .float{position:absolute;bottom:-26px;left:-22px;width:42%;border-radius:16px;overflow:hidden;border:5px solid var(--cream);box-shadow:0 20px 40px -20px rgba(21,17,15,.5)}
+.iimg .float img{width:100%;height:170px;object-fit:cover}
+.iimg .rib{position:absolute;top:24px;right:-10px;background:var(--gold);color:var(--noir);padding:10px 20px;border-radius:8px;font-weight:700;font-size:.85rem;box-shadow:0 12px 24px -10px rgba(198,161,91,.6)}
+
+/* services alternating */
+.svc-sec{padding:100px 0;background:var(--noir);color:#fff;position:relative;overflow:hidden}
+.svc-sec::before{content:"";position:absolute;top:-120px;left:-120px;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(198,161,91,.16),transparent 65%)}
+.svc-sec .sec-h{text-align:center;max-width:40rem;margin:0 auto 60px;position:relative}
+.svc-sec .eyebrow{color:var(--gold2);justify-content:center;margin-bottom:16px}
+.svc-sec h2{font-size:clamp(2rem,4.6vw,3rem)}
+.svc-sec h2 em{font-family:'Cormorant Garamond';color:var(--gold2)}
+.svc-sec .sub{color:var(--softd);margin-top:14px}
+.svc-list{position:relative;display:grid;gap:0}
+.srow{display:grid;grid-template-columns:auto 1fr auto;gap:28px;align-items:center;padding:30px 6px;border-top:1px solid rgba(255,255,255,.1);transition:padding .5s cubic-bezier(.32,.72,0,1),background .5s}
+.srow:last-child{border-bottom:1px solid rgba(255,255,255,.1)}
+.srow:hover{background:rgba(198,161,91,.06);padding-right:22px;padding-left:22px}
+.srow .num{font-family:'Cormorant Garamond';font-style:italic;font-size:1.4rem;color:var(--gold);width:46px}
+.srow .txt h3{font-size:1.5rem;color:#fff;margin-bottom:4px;font-weight:700}
+.srow .txt p{color:var(--softd);font-size:.96rem}
+.srow .ar{width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.2);display:grid;place-items:center;color:var(--gold2);transition:transform .5s cubic-bezier(.32,.72,0,1),background .5s,color .5s}
+.srow:hover .ar{background:var(--gold);color:var(--noir);transform:rotate(-45deg) scale(1.05)}
+
+/* gallery marquee */
+.gal{padding:100px 0;background:linear-gradient(180deg,var(--cream),var(--sand))}
+.gal .sec-h{text-align:center;margin-bottom:50px}
+.gal .eyebrow{color:var(--gold);justify-content:center;margin-bottom:16px}
+.gal h2{font-size:clamp(2rem,4.4vw,2.9rem);color:var(--ink)}
+.gal h2 em{font-family:'Cormorant Garamond';color:var(--blush)}
+.mq{display:flex;gap:18px;width:max-content;animation:scrollx 34s linear infinite}
+.mqwrap{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.mqwrap:hover .mq{animation-play-state:paused}
+.mq figure{width:330px;height:240px;border-radius:18px;overflow:hidden;flex:0 0 auto;position:relative;box-shadow:0 16px 36px -22px rgba(21,17,15,.5)}
+.mq figure img{width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.22,.61,.36,1)}
+.mq figure:hover img{transform:scale(1.08)}
+@keyframes scrollx{to{transform:translateX(50%)}}
+
+/* why band */
+.why{padding:100px 0;background:var(--cream)}
+.why .sec-h{text-align:center;margin-bottom:54px}
+.why .eyebrow{color:var(--gold);justify-content:center;margin-bottom:16px}
+.why h2{font-size:clamp(1.9rem,4.2vw,2.8rem);color:var(--ink)}
+.why h2 em{font-family:'Cormorant Garamond';color:var(--blush)}
+.wgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.wcard{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:34px 28px;transition:transform .5s cubic-bezier(.32,.72,0,1),box-shadow .5s}
+.wcard:hover{transform:translateY(-7px);box-shadow:0 26px 50px -28px rgba(21,17,15,.4)}
+.wcard .d{width:54px;height:54px;border-radius:14px;background:linear-gradient(135deg,var(--noir),var(--char));display:grid;place-items:center;color:var(--gold2);margin-bottom:18px}
+.wcard h3{font-size:1.22rem;color:var(--ink);margin-bottom:8px}
+.wcard p{color:var(--soft);font-size:.96rem}
+
+/* stats */
+.stats{padding:64px 0;background:var(--noir);color:#fff}
+.st-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+.st .n{font-family:'Almarai';font-size:clamp(2rem,5vw,3.2rem);color:var(--gold2);font-weight:800;line-height:1}
+.st .l{color:var(--softd);font-size:.92rem;margin-top:8px}
+
+/* cta */
+.cta{padding:110px 0;background:linear-gradient(180deg,var(--sand),var(--cream))}
+.cbox{position:relative;background:var(--noir);border-radius:30px;padding:70px 40px;text-align:center;overflow:hidden}
+.cbox::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(60% 90% at 80% 0%,rgba(215,163,155,.2),transparent 60%),
+  radial-gradient(50% 80% at 10% 100%,rgba(198,161,91,.22),transparent 60%)}
+.cbox h2{position:relative;font-size:clamp(2rem,4.6vw,3.1rem);color:#fff}
+.cbox h2 em{font-family:'Cormorant Garamond';color:var(--gold2)}
+.cbox p{position:relative;color:var(--softd);max-width:32rem;margin:16px auto 30px;font-size:1.06rem}
+.cbox .hbtns{position:relative;justify-content:center}
+.cbox .btn-g{color:#fff;border-color:rgba(255,255,255,.25)}
+
+/* footer */
+footer{background:#0f0c0b;color:rgba(245,239,230,.62);padding:60px 0 28px}
+.fgrid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px;margin-bottom:38px}
+footer .brand{font-family:'Almarai';font-size:1.4rem;color:#fff;display:flex;align-items:center;gap:10px;margin-bottom:14px}
+footer .brand i{width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,var(--gold2),var(--gold));display:grid;place-items:center;color:var(--noir);font-family:'Cormorant Garamond';font-style:italic;font-weight:700}
+footer h4{color:#fff;font-size:1rem;margin-bottom:15px;font-weight:700}
+footer a,footer p.fl{display:block;color:rgba(245,239,230,.55);font-size:.92rem;margin-bottom:10px;transition:color .3s}
+footer a:hover{color:var(--gold2)}
+.fbot{border-top:1px solid rgba(255,255,255,.08);padding-top:22px;text-align:center;font-size:.84rem;color:rgba(245,239,230,.4)}
+.fbot a{color:var(--gold2)}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(34px);filter:blur(6px);transition:opacity .9s cubic-bezier(.22,.61,.36,1),transform .9s cubic-bezier(.22,.61,.36,1),filter .9s}
+.rv.in{opacity:1;transform:none;filter:none}
+.rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.2s}.rv.d3{transition-delay:.3s}.rv.d4{transition-delay:.4s}
+
+.wafab{position:fixed;bottom:24px;left:24px;z-index:800;width:60px;height:60px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 14px 30px -8px rgba(37,211,102,.6);animation:pulse 2.4s infinite;transition:transform .4s}
+.wafab:hover{transform:scale(1.08)}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.5)}70%{box-shadow:0 0 0 16px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+
+@media(max-width:920px){
+  .isplit{grid-template-columns:1fr;gap:50px}
+  .iimg .float{width:38%}
+  .wgrid{grid-template-columns:1fr}
+  .st-grid{grid-template-columns:1fr 1fr;gap:34px 20px}
+  .fgrid{grid-template-columns:1fr;gap:32px}
+  nav .links{display:none}
+  .burger{display:flex}
+}
+@media(max-width:560px){
+  .wrap{padding:0 18px}
+  .hero .inner{padding-bottom:54px}
+  .srow{grid-template-columns:auto 1fr;gap:16px}
+  .srow .ar{display:none}
+  .srow .num{width:32px;font-size:1.15rem}
+  .mq figure{width:240px;height:180px}
+  .hbtns{flex-direction:column;align-items:stretch}
+  .btn{justify-content:center}
+  .hmeta{gap:20px}
+  .hmeta .it+.it{padding-right:20px}
+  .iimg .float{position:relative;bottom:0;left:0;width:60%;margin-top:14px}
+  .cbox{padding:48px 22px}
+}
+</style>
+</head>
+<body>
+<div id="pre"><div class="mk">Mayo</div><div class="ln"></div></div>
+
+<nav id="nav">
+  <a class="brand" href="#top"><i>M</i> صالون مايو</a>
+  <div class="links">
+    <a href="#intro">عن الصالون</a>
+    <a href="#services">خدماتنا</a>
+    <a href="#gallery">معرضنا</a>
+    <a href="#why">لماذا نحن</a>
+    <a class="navcta" href="https://wa.me/966553443140" target="_blank" rel="noopener">احجزي الآن</a>
+  </div>
+  <button class="burger" id="burger" aria-label="القائمة"><span></span><span></span><span></span></button>
+</nav>
+<div class="mob" id="mob">
+  <a href="#intro">عن الصالون</a>
+  <a href="#services">خدماتنا</a>
+  <a href="#gallery">معرضنا</a>
+  <a href="#why">لماذا نحن</a>
+  <a class="navcta" href="https://wa.me/966553443140" target="_blank" rel="noopener">احجزي الآن</a>
+</div>
+
+<a class="wafab" href="https://wa.me/966553443140" target="_blank" rel="noopener" aria-label="واتساب">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.225zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+</a>
+
+<span id="top"></span>
+<!-- HERO -->
+<header class="hero">
+  <div class="bg"><img src="img/hero.jpg" alt="صالون مايو للتزيين النسائي"></div>
+  <div class="wrap inner">
+    <span class="eyebrow rv"><b></b> صالون نسائي · مكة المكرمة</span>
+    <h1 class="rv d1">جمالٌ يليق<br>بـ<em>تفاصيلكِ.</em></h1>
+    <p class="lead rv d2">صالون مايو للتزيين النسائي في مكة المكرمة. تصفيف، صبغات، مكياج، وعناية متكاملة في أجواء راقية وعلى يد مختصّات يصنعن الفرق.</p>
+    <div class="hbtns rv d3">
+      <a class="btn btn-p" href="https://wa.me/966553443140" target="_blank" rel="noopener">احجزي موعدكِ <span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e0c084" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></span></a>
+      <a class="btn btn-g" href="#services">خدماتنا</a>
+    </div>
+    <div class="hmeta rv d4">
+      <div class="it"><div class="n">4.5★</div><div class="l">تقييم Google</div></div>
+      <div class="it"><div class="n">٣٥٠+</div><div class="l">تقييم موثّق</div></div>
+      <div class="it"><div class="n">٧</div><div class="l">خدمات رئيسية</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- INTRO -->
+<section class="intro" id="intro">
+  <div class="wrap isplit">
+    <div class="rv">
+      <span class="eyebrow"><b></b> من نحن</span>
+      <h2>أناقتكِ تبدأ من <em>مايو.</em></h2>
+      <p>في <strong>صالون مايو</strong> نصنع لكِ تجربة تجميل متكاملة في قلب مكة المكرمة. نهتم بأدقّ التفاصيل، من استقبالكِ في أجواء هادئة وراقية، إلى لمسة أخيرة تخرجين بها بإطلالة تثق بها وتفخرين بها.</p>
+      <p>خبرة موثوقة، فريق نسائي محترف، ومنتجات مختارة بعناية، اجتمعت لتمنحكِ ما تستحقّينه فعلاً.</p>
+    </div>
+    <div class="iimg rv d1">
+      <div class="rib">٣٥٠+ تقييم ★</div>
+      <div class="main"><img src="img/arch.jpg" alt="داخل صالون مايو"></div>
+      <div class="float"><img src="img/detail.jpg" alt="تفاصيل الصالون"></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="svc-sec" id="services">
+  <div class="wrap">
+    <div class="sec-h">
+      <span class="eyebrow rv"><b></b> خدماتنا</span>
+      <h2 class="rv d1">عناية <em>من الألف إلى الياء.</em></h2>
+      <p class="sub rv d2">كل ما تحتاجينه للعناية بجمالكِ تحت سقفٍ واحد.</p>
+    </div>
+    <div class="svc-list">
+      <div class="srow rv"><div class="num">٠١</div><div class="txt"><h3>تصفيف وقص الشعر</h3><p>قصّات عصرية وتسريحات تناسب مناسباتكِ وإطلالاتكِ اليومية.</p></div><div class="ar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></div></div>
+      <div class="srow rv"><div class="num">٠٢</div><div class="txt"><h3>صبغات وعلاجات الشعر</h3><p>ألوان وصبغات احترافية وبروتين وعلاجات مغذّية لشعر صحي ولامع.</p></div><div class="ar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></div></div>
+      <div class="srow rv"><div class="num">٠٣</div><div class="txt"><h3>مكياج وإطلالات</h3><p>مكياج سهرات ومناسبات يبرز ملامحكِ بأسلوب راقٍ وأنيق.</p></div><div class="ar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></div></div>
+      <div class="srow rv"><div class="num">٠٤</div><div class="txt"><h3>عناية بالبشرة</h3><p>جلسات تنظيف وعناية بالوجه لبشرة نضرة ومشرقة.</p></div><div class="ar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></div></div>
+      <div class="srow rv"><div class="num">٠٥</div><div class="txt"><h3>مانيكير وباديكير</h3><p>عناية كاملة بالأظافر بتصاميم وألوان أنيقة عصرية.</p></div><div class="ar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></div></div>
+      <div class="srow rv"><div class="num">٠٦</div><div class="txt"><h3>خدمات العرائس</h3><p>باقات متكاملة لعروس مكة: شعر، مكياج، ولمسات تليق بيومكِ.</p></div><div class="ar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gal" id="gallery">
+  <div class="wrap sec-h">
+    <span class="eyebrow rv"><b></b> معرض الصالون</span>
+    <h2 class="rv d1">أجواؤنا <em>تتحدّث.</em></h2>
+  </div>
+  <div class="mqwrap rv">
+    <div class="mq">
+      <figure><img src="img/hero.jpg" alt="صالون مايو"></figure>
+      <figure><img src="img/arch.jpg" alt="ركن أنيق"></figure>
+      <figure><img src="img/chairs.jpg" alt="كراسي التصفيف"></figure>
+      <figure><img src="img/corridor.jpg" alt="ممر الصالون"></figure>
+      <figure><img src="img/stations.jpg" alt="أركان العمل"></figure>
+      <figure><img src="img/detail.jpg" alt="تفاصيل"></figure>
+      <figure><img src="img/product.jpg" alt="منتجات العناية"></figure>
+      <figure><img src="img/hero.jpg" alt="صالون مايو"></figure>
+      <figure><img src="img/arch.jpg" alt="ركن أنيق"></figure>
+      <figure><img src="img/chairs.jpg" alt="كراسي التصفيف"></figure>
+      <figure><img src="img/corridor.jpg" alt="ممر الصالون"></figure>
+      <figure><img src="img/stations.jpg" alt="أركان العمل"></figure>
+      <figure><img src="img/detail.jpg" alt="تفاصيل"></figure>
+      <figure><img src="img/product.jpg" alt="منتجات العناية"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why" id="why">
+  <div class="wrap sec-h">
+    <span class="eyebrow rv"><b></b> لماذا مايو</span>
+    <h2 class="rv d1">سببٌ <em>لتعودي إلينا.</em></h2>
+  </div>
+  <div class="wrap wgrid">
+    <div class="wcard rv"><div class="d"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 7.4H22l-6 4.5 2.3 7.1-6.3-4.6L5.7 21 8 13.9 2 9.4h7.6z"/></svg></div><h3>خبرة موثوقة</h3><p>تقييم ٤٫٥ وثقة أكثر من ٣٥٠ عميلة في مكة المكرمة.</p></div>
+    <div class="wcard rv d1"><div class="d"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.6l-1-1a5.5 5.5 0 00-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 000-7.8z"/></svg></div><h3>أجواء راقية</h3><p>خصوصية تامة وراحة في كل ركن من الصالون.</p></div>
+    <div class="wcard rv d2"><div class="d"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div><h3>نتائج تدوم</h3><p>منتجات مختارة وأيادٍ محترفة تظهر آثارها.</p></div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="wrap st-grid">
+    <div class="st rv"><div class="n"><span data-count="350">0</span>+</div><div class="l">عميلة سعيدة</div></div>
+    <div class="st rv d1"><div class="n"><span data-count="4.5" data-dec="1">0</span></div><div class="l">تقييم Google</div></div>
+    <div class="st rv d2"><div class="n"><span data-count="6">0</span></div><div class="l">خدمات رئيسية</div></div>
+    <div class="st rv d3"><div class="n"><span data-count="100">0</span>%</div><div class="l">خصوصية وراحة</div></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="wrap">
+    <div class="cbox rv">
+      <h2>إطلالتكِ القادمة <em>تبدأ هنا.</em></h2>
+      <p>احجزي موعدكِ في صالون مايو، ودعينا نمنحكِ تجربة تجميل تليق بكِ في قلب مكة المكرمة.</p>
+      <div class="hbtns">
+        <a class="btn btn-p" href="https://wa.me/966553443140" target="_blank" rel="noopener">احجزي عبر واتساب <span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e0c084" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></span></a>
+        <a class="btn btn-g" href="tel:+966553443140">اتصلي · 0553443140</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="rv">
+        <div class="brand"><i>M</i> صالون مايو</div>
+        <p class="fl">صالون مايو للتزيين النسائي · وجهتكِ للجمال والعناية في مكة المكرمة. أناقة وخصوصية واهتمام بالتفاصيل.</p>
+      </div>
+      <div class="rv d1">
+        <h4>روابط</h4>
+        <a href="#intro">عن الصالون</a>
+        <a href="#services">خدماتنا</a>
+        <a href="#gallery">معرضنا</a>
+        <a href="#why">لماذا نحن</a>
+      </div>
+      <div class="rv d2">
+        <h4>تواصلي معنا</h4>
+        <a href="https://wa.me/966553443140" target="_blank" rel="noopener">واتساب · 0553443140</a>
+        <a href="tel:+966553443140">اتصال مباشر</a>
+        <p class="fl">مكة المكرمة · المملكة العربية السعودية</p>
+      </div>
+    </div>
+    <div class="fbot">© <span id="yr"></span> صالون مايو للتزيين النسائي · جميع الحقوق محفوظة · تصميم <a href="https://wa.me/966505989304" target="_blank" rel="noopener">واقع للتصميم</a></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var pre=document.getElementById('pre');
+  function hide(){if(pre)pre.classList.add('done')}
+  window.addEventListener('load',function(){setTimeout(hide,600)});
+  setTimeout(hide,2600);
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  var nav=document.getElementById('nav');
+  window.addEventListener('scroll',function(){if(window.scrollY>40)nav.classList.add('shr');else nav.classList.remove('shr');});
+  var burger=document.getElementById('burger'),mob=document.getElementById('mob');
+  if(burger){burger.addEventListener('click',function(){burger.classList.toggle('x');mob.classList.toggle('open')});}
+  mob.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){burger.classList.remove('x');mob.classList.remove('open')})});
+  var rvs=[].slice.call(document.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -8% 0px'});rvs.forEach(function(el){io.observe(el)});}else{rvs.forEach(function(el){el.classList.add('in')});}
+  window.addEventListener('scroll',function(){rvs.forEach(function(el){var r=el.getBoundingClientRect();if(r.top<window.innerHeight*0.95)el.classList.add('in')})},{passive:true});
+  setTimeout(function(){rvs.forEach(function(el){el.classList.add('in')})},3000);
+  var counted=false;
+  function counters(){if(counted)return;counted=true;document.querySelectorAll('[data-count]').forEach(function(el){var t=parseFloat(el.getAttribute('data-count')),dec=el.getAttribute('data-dec')?1:0,s=0,step=t/60;var iv=setInterval(function(){s+=step;if(s>=t){s=t;clearInterval(iv)}el.textContent=dec?s.toFixed(1):Math.floor(s)},22);});}
+  var stEl=document.querySelector('.stats');
+  if(stEl&&'IntersectionObserver' in window){var io2=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){counters();io2.disconnect()}})},{threshold:.3});io2.observe(stEl);}else counters();
+  setTimeout(function(){document.querySelectorAll('[data-count]').forEach(function(el){if(el.textContent==='0')el.textContent=el.getAttribute('data-count')})},3200);
+})();
+</script>
+</body>
+</html>
